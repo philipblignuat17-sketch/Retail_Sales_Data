@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------------------------
+---- PRIMARY SYNTAX THAT IS USED TO PULL THE WHOLE TABLE FROM RETAIL DATA SET LIMIT 100
+--------------------------------------------------------------------------------------------
+SELECT *
+FROM bright_learn.data.retail_sales
+LIMIT 100;
+
+---------------------------------------------------------------------------------------------
+----- GETTING TOTAL AMOUNT FROM ALL IN PRODUCT CATEGORY'S AND LIMIT BY 50
+---------------------------------------------------------------------------------------------
+
+SELECT `Customer ID`, `Product Category`, `Total Amount`
+FROM bright_learn.data.retail_sales
+WHERE `Total Amount` > 100
+LIMIT 50;
+
+----------------------------------------------------------------------------------------------
+----- GETTING BEAUTY FROM PRODUCT CATEGORY IN THE RETAIL DATA SET AND LIMIT NY 20
+----------------------------------------------------------------------------------------------
+
+SELECT *
+FROM bright_learn.data.retail_sales
+WHERE `Product Category` = 'Beauty'
+LIMIT 20;
+----------------------------------------------------------------------------------------------
+----- GETTING QUANTITY THAT IS >1 AND THEN LIMIT BY 40 
+----------------------------------------------------------------------------------------------
+
+
+SELECT `Quantity`,`Price per Unit`,`Gender`
+FROM bright_learn.data.retail_sales
+WHERE `Quantity` > 1
+LIMIT 40;
+
+----------------------------------------------------------------------------------------------
+----- GETTING AGE FROM PRODUCT CATEGORY THAT IS >20 THEN LIMIT BY 10
+----------------------------------------------------------------------------------------------
+
+SELECT `Age`,`Gender`,`Product Category`
+FROM bright_learn.data.retail_sales
+WHERE `Age` > 20
+LIMIT 10;
