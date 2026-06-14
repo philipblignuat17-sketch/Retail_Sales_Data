@@ -1,0 +1,24 @@
+-----------------------------------------------------------------
+---CURRENT DATES & TIMES
+-----------------------------------------------------------------
+
+SELECT CURRENT_DATE();------Todays Date Only
+SELECT CURRENT_TIMESTAMP();-------TimeStamp
+SELECT NOW();---------------TimeStamp
+
+-----------------------------------------------------------------
+--TIME ZONE CONVERTIONS
+-----------------------------------------------------------------
+
+SELECT FROM_UTC_TIMESTAMP('2026-06-10 20:00:00', 'Africa/Johannesburg');
+SELECT FROM_UTC_TIMESTAMP('2026-06-10 20:00:00', 'America/New_York');
+SELECT FROM_UTC_TIMESTAMP('2026-06-10 20:00:00', 'Africa/Johannesburg');
+
+
+------------------------------------------------------------------
+--EXTRATING DATE PARTS
+------------------------------------------------------------------
+
+SELECT YEAR('2026-06-10') AS Year,
+       MONTH('2026-06-10') AS Day,
+       HOUR('2026-06-10 20:30:00') AS Minute;
